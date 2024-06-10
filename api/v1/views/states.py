@@ -5,7 +5,7 @@ Flask route that returns json status response
 from api.v1.views import app_views
 from flask import abort, jsonify, make_response, request
 from models import storage, CNC
-
+from models.state import State
 
 @app_views.route('/states', methods=['GET', 'POST'])
 def states_no_id():
